@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NY Times API</title>
+  <link rel="stylesheet" href="nyt.css">
+</head>
+<body>
+  <h1>NY Times video search</h1>
+
+  <div class="wrapper">
+    <div class="controls">
+      <!-- Search Form -->
+      <form>
+        <p>
+          <label for="search">Enter a SINGLE search term (required):</label>
+          <input type="text" id="search" class="search" required>
+        </p>
+        <p>
+          <label for="start-date">Enter a start date (format MMDDYYYY:</label>
+          <input type="date" id="start-date" pattern="[0-9]{8}">
+        </p>
+        <p>
+          <label for="end-date">Enter a end date (format MMDDYYYY):</label>
+          <input type="date" id="end-date" pattern="[0-9]{8}">
+        </p>
+        <!-- The pattern attribute allows us to control what kind of input is allowed to be used. the [0-9] specifies the range of numbers that can be inputted and the {8} specifies that at least 8 numbers are required to be considered valid -->
+        <p>
+          <button class="submit">Submit search</button>
+        </p>
+      </form>
+    </div>
+
+    <!-- Results Section -->
+    <div class="results">
+      <!-- Results Navigation -->
+      <nav>
+        <button class="prev">Previous 10</button>
+        <button class="next">Next 10</button>
+      </nav>
+      <!-- Results From Request -->
+      <section>
+
+      </section>
+    </div>
+  </div>
+  <script type="text/javascript" src="nyt.js"></script>
+</body>
+</html>
